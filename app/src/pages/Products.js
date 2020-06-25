@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch} from 'react-redux'
 import { getProduct } from '../redux/actions';
 import Axios from 'axios';
 
-// import Header from '../components/Header';
-import Card from '../components/Card';
-import Alert from '../components/Alert';
+import Header from '../components/Header';
+import Card from '../components/Card'
+import Alert from '../components/Alert'
 
 export default () => {
     const products = useSelector(state => state.products)
@@ -25,12 +25,13 @@ export default () => {
             })
             dispatch(getProduct(productsList))
         })
-    }}
-    ,[]) 
+    }},[]) 
    
     return (
+
         <div className="pages">
             {alert && <Alert msg={alert}/>}
+            <Header total={total} />
             {products.length ? 
             <div className="productList">
                 {products.length && <Card products={products} changeAlert={{setAlert}}/>}

@@ -5,6 +5,18 @@ import { min, plus } from '../redux/actions'
 export default (props) => {
     const dispatch = useDispatch()
 
+    const add = (title, index) =>{
+        props.changeAlert.setAlert('sukses menambah produk')
+        dispatch(plus(title, index))
+        setInterval(() => {props.changeAlert.setAlert(false)}, 1000);
+    }
+
+    const reduce = (title, index) =>{
+        props.changeAlert.setAlert('sukses mengurangi produk')
+        dispatch(min(title, index))
+        setInterval(() => {props.changeAlert.setAlert(false)}, 1000);
+    }
+
     return (
         <div className="mainPage">
             <div className="card-container">
