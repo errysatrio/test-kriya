@@ -1,38 +1,97 @@
-.App {
+body {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+}
+
+.alert {
+  top: 20vh;
+  position: fixed;
+  text-align: center;
+  background-color: blue;
+  width: 70vw;
+  opacity: 60%;
+}
+
+.amount {
+  display: flex ; 
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+}
+
+.card {
+  flex-flow: column wrap;
+  border: 2px green solid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1vh;
+  width: 60vw;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed ;
+  width: 61vw;
+  background-color: green;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home:hover{
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pages {
+  flex-flow: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.productList {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
+  width: 60vw;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.icon {
+  border: 2px black solid;
+  border-radius: 100%;
+  padding: 1vw;
+  margin-left: 1vw;
 }
 
-.App-link {
-  color: #61dafb;
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.right-header {
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root {
+  display: flex;
+  justify-content: center;
 }

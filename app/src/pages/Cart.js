@@ -34,7 +34,7 @@ export default () => {
                 <Card products={cart}changeAlert={{setAlert}}/>
                 </>
                 :
-                <h3> keranjang belanja kosong </h3>
+                <h3> keranjang belanja kosong, silahkan pilih produk di home </h3>
             }
             </div>
         </div>
